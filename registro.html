@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fitastic</title>
+    <link rel="icon" href="./assets/images/logo1.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <div id="logoTitle">
+            <div style="margin-left: 5vw; margin-right: 5vw;">
+                <a href="./inicio.html"><img src="./assets/images/logo1.png" style="height: 9vh;"/></a>
+            </div>
+            <div style="margin-left: 25vw; margin-right: 5vw;">
+                <h1 style="font-size: 9vh; font-family: Roboto; color: orangered; font-weight: bold; font-style: italic;">Fitastic</h1>
+            </div>
+        </div>
+        <div id="navegadorInicio"  style="margin-right: 5vw;">
+            <ul class="nav nav-pills justify-content-end">
+                <li class="nav-item" style="margin: 5px;">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar sesión</button>
+                </li>
+                </ul>
+        </div>
+    </header>
+
+    <main id="registro">
+        <form action="goToRegistro2()" class="formulario" id="formulario">
+
+            <!-- Grupo usuario-->
+            <div class="formulario-group" id="grupo-usuario">
+                <label for="usuario" class="formulario-label">Usuario</label>
+                <div class="formulario-group-input">
+                    <input type="text" class="formulario-input" name="usuario" id="usuario" placeholder="usuario">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="formulario-validacion-estado bi bi-x-circle-fill" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                    </svg>
+                </div>
+                <p class="formulario-input-error">El usuario tiene que tener entre 4 y 16 dígitos.</p>
+            </div>
+
+            <!-- Grupo nombre-->
+            <div class="formulario-group" id="grupo-nombre">
+                <label for="nombre" class="formulario-label">Nombre</label>
+                <div class="formulario-group-input">
+                    <input type="text" class="formulario-input" name="nombre" id="nombre" placeholder="nombre">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="formulario-validacion-estado bi bi-x-circle-fill" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                    </svg>
+                </div>
+                <p class="formulario-input-error">El nombre tiene que tener entre 4 y 16 dígitos.</p>
+            </div>
+
+            <!-- Grupo email-->
+            <div class="formulario-group" id="grupo-email">
+                <label for="email" class="formulario-label">Email</label>
+                <div class="formulario-group-input">
+                    <input type="email" class="formulario-input" name="email" id="email" placeholder="correo@correo.com">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="formulario-validacion-estado bi bi-x-circle-fill" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                    </svg>
+                </div>
+                <p class="formulario-input-error">El email tiene que tener entre 4 y 16 dígitos.</p>
+            </div>
+
+            <!-- Grupo contraseña-->
+            <div class="formulario-group" id="grupo-password">
+                <label for="password" class="formulario-label">Contraseña
+                    <input type="password" class="formulario-input" name="password" id="password">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="formulario-validacion-estado bi bi-x-circle-fill" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                    </svg>
+                </div>
+                <p class="formulario-input-error">El password tiene que tener entre 4 y 12 dígitos.</p>
+            </div>
+
+            <!-- Grupo contraseña2-->
+            <div class="formulario-group" id="grupo-password2">
+                <label for="password2" class="formulario-label">Repita la contraseña
+                    <input type="password" class="formulario-input" name="password2" id="password2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="formulario-validacion-estado bi bi-x-circle-fill" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                    </svg>
+                </div>
+                <p class="formulario-input-error">Las contraseñas han de ser iguales.</p>
+            </div>
+
+            <!-- Grupo terminos-->
+            <div class="formulario-group" id="grupo-terminos">
+                <label class="formulario-label">
+                    <input class="formulario-checkbox" type="checkbox" name="terminos" id="terminos">
+                    Acepto los terminos y condiciones.
+                </label>
+            </div>
+            
+            <div class="formulario-mensaje" id="formulario-mensaje">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="formulario-validacion-estado bi bi-exclamation-diamond-fill" viewBox="0 0 16 16">
+                        <path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098L9.05.435zM8 4c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995A.905.905 0 0 1 8 4zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                    <b>Error:</b> Por favor, rellena bien el formulario.
+                </p>
+            </div>
+
+            <div class="formulario-group formulario-group-btn-enviar">
+				<button type="submit" class="formulario-btn" onclick="goToRegistro2()">Enviar</button>
+				<p class="formulario-mensaje-exito" id="formulario-mensaje-exito">Formulario enviado correctamente</p>
+			</div>
+
+        </form>
+
+
+
+
+
+    </main>
+    <footer>
+        <div style="margin-left: 5vw;">
+            <a href="./inicio.html"><img src="./assets/images/logo1.png" style="height: 6vh; margin-top: 2vh;"/></a>
+        </div>
+        <div>
+            <p style="color: white; font-family: roboto; font-weight: light; justify-content: center; text-align: center; margin-top: 3vh;">- - - Pagina web desarrollada por Diego Velasco Peribáñez - - -</p>
+        </div>
+        <div  style="margin-right: 5vw;">
+            <ul class="nav nav-pills justify-content-end" style="margin-top: 2vh;">
+                <li class="nav-item" style="margin: 5px;">
+                    <a href="https://www.whatsapp.com"><svg xmlns="http://www.w3.org/2000/svg" height="4vh" fill="currentColor" color="white" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                    </svg></a>
+                </li>
+                <li class="nav-item" style="margin: 5px;">
+                    <a href="https://www.facebook.com"><svg xmlns="http://www.w3.org/2000/svg" height="4vh" fill="currentColor" color="white" class="bi bi-facebook" viewBox="0 0 16 16">
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                    </svg></a>
+                </li>
+                <li class="nav-item" style="margin: 5px;">
+                    <a href="https://www.twitter.com"><svg xmlns="http://www.w3.org/2000/svg" height="4vh" fill="currentColor" color="white" class="bi bi-twitter" viewBox="0 0 16 16">
+                        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                    </svg></a>
+                </li>
+                </ul>
+        </div>
+    </footer>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="modalLogin" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="padding: 50px;">
+                <div class="container">
+                    <img src="./assets/images/logo1.png" class="mx-auto d-block" style="width: 200px; height: 200px;"/>    
+                </div>
+                <br>
+                
+                <!-- Formulario Inicio de Sesion -->
+                <form name="inicioSesion" action="javascript:checkInicio()">
+                    <div class="mb-3">
+                    <label for="inputEmail" class="form-label">Correo electrónico:</label>
+                    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Email">
+                    <div id="emailHelp" class="form-text">Debe estar registrado, si no lo esta, registrese <a href="./registro.html">aquí</a>.</div>
+                    </div>
+                    <div class="mb-3">
+                    <label for="inputPassword" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Contraseña">
+                    </div>
+                    <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="agree" onclick="">
+                    <label class="form-check-label" for="agree">Aceptas los terminos y condiciones.</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="float: right;">Iniciar sesión</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./js/functions.js"></script>
+    <script type="text/javascript" src="./js/db.js"></script>
+    <script type="text/javascript" src="./js/formulario.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+</html>

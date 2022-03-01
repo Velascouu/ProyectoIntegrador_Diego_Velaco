@@ -1,0 +1,339 @@
+body{
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+header{
+    width: 100vw;
+    min-height: 10vh;
+    border-bottom: 3px solid orangered;
+    /* Enable flex mode. */
+    display: flex;  
+    /* Spread out the elements inside the header. */
+    justify-content: space-between;
+    /* Align items vertically in the center. */
+    align-items: center;
+}
+
+#logoTitle{
+    display: flex;  
+    /* Spread out the elements inside the header. */
+    justify-content: space-between;
+    /* Align items vertically in the center. */
+    align-items: center;
+}
+
+.nav-item{
+    margin: 5px;
+}
+
+.inToCard{
+    display: flex;
+    flex-direction: row;
+}
+
+.inToCard-text{
+    width: 50%;
+}
+
+.inToCard-btn{
+    padding-left: 160px;
+    justify-items: right;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 1032px){
+    .inToCard{
+        flex-direction: column;
+    }
+    .inToCard-text{
+        width: 100%;
+    }
+    .inToCard-btn{
+        flex-direction: row;
+        padding-left: 0px;
+    }
+}
+
+@media (max-width: 620px){
+    header{
+        /* Reverse the axis of the header, making it vertical. */
+        flex-direction: column;
+            
+        /* Align items to the begining (the left) of the header. */
+        align-items: flex-start;
+    }
+
+    footer{
+        /* Reverse the axis of the header, making it vertical. */
+        flex-direction: column;
+            
+        /* Align items to the begining (the left) of the header. */
+        align-items: flex-start;
+    }
+
+    /* FORMULARIO */
+
+    .formulario {
+		grid-template-columns: 1fr;
+	}
+
+	.formulario-group-terminos, 
+	.formulario-mensaje,
+	.formulario-group-btn-enviar {
+		grid-column: 1;
+	}
+
+	.formulario-btn {
+		width: 100%;
+	}
+}
+
+.col{
+    height: 275px;
+    margin: 3px;
+}
+
+#navegadorInicio{
+    margin-top: 3vh;
+}
+
+main{
+    min-height: 80vh;
+}
+
+@media (max-width: 1460px){
+    #cuerpo1{
+        width: 90vw;
+    }
+}
+
+footer{
+    width: 100vw;
+    min-height: 10vh;
+    background-color: orangered;
+    /* Enable flex mode. */
+    display: flex;  
+    /* Spread out the elements inside the header. */
+    justify-content: space-between;
+    /* Align items vertically in the center. */
+    align-items: center;
+}
+
+#cuerpo1{
+    width: 70vw;
+    min-height: 80vh;
+    margin: 0 auto;
+    background-color: rgb(255, 127, 81);
+    border-right: 2px solid orangered;
+    border-left: 2px solid orangered;
+}
+
+#cuerpo2{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 10px;
+    padding-bottom: 3%;
+}
+
+.btn-primary{
+    background-color: orangered;
+    border-color: orangered;
+}
+
+.btn-primary:hover{
+    background-color: rgb(253, 110, 57);
+    border-color: orangered;
+}
+
+.btn-primary:visited{
+    background-color: orangered;
+    border-color: orangered;
+}
+
+.btn-primary:active{
+    background-color: rgb(253, 110, 57);
+    border-color: orangered;
+}
+
+.btn-primary:focus{
+    background-color: rgb(253, 110, 57);
+    border-color: orangered;
+}
+
+
+
+
+
+/* FORMULARIO*/
+#registro{
+    max-width: 800px;
+    width: 90%;
+    margin: auto;
+    padding: 40px;
+}
+
+.formulario {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+.formulario-label {
+	display: block;
+	font-weight: 700;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.formulario-group-input {
+	position: relative;
+}
+
+.formulario-input {
+	width: 80%;
+	background: #fff;
+	border: 3px solid transparent;
+	border-radius: 3px;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 40px 0 10px;
+	transition: .3s ease all;
+}
+
+.formulario-input:focus {
+	border: 3px solid #0075FF;
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+}
+
+.formulario-input-error {
+	font-size: 12px;
+	margin-bottom: 0;
+	display: none;
+}
+
+.formulario-input-error-activo {
+	display: block;
+}
+
+.formulario-validacion-estado {
+	position: absolute;
+	right: 10px;
+	bottom: 15px;
+	z-index: 100;
+	font-size: 16px;
+	opacity: 0;
+}
+
+.formulario-checkbox {
+	margin-right: 10px;
+}
+
+.formulario-group-terminos, 
+.formulario-mensaje,
+.formulario-group-btn-enviar {
+	grid-column: span 2;
+}
+
+.formulario-mensaje {
+	height: 45px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+}
+
+.formulario-mensaje-activo {
+	display: block;
+}
+
+.formulario-mensaje p {
+	margin: 0;
+}
+
+.formulario-group-btn-enviar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.formulario-btn {
+	height: 45px;
+	line-height: 45px;
+	width: 30%;
+	background: #000;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: .1s ease all;
+}
+
+.formulario-btn:hover {
+	box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+}
+
+.formulario-mensaje-exito {
+	font-size: 14px;
+	color: #119200;
+	display: none;
+}
+
+.formulario-mensaje-exito-activo {
+	display: block;
+}
+
+/* ----- -----  Estilos para Validacion ----- ----- */
+.formulario-group-correcto .formulario-validacion-estado {
+	color: #1ed12d;
+	opacity: 1;
+}
+
+.formulario-group-incorrecto .formulario-label {
+	color: #bb2929;
+}
+
+.formulario-group-incorrecto .formulario-validacion-estado {
+	color: #bb2929;
+	opacity: 1;
+}
+
+.formulario-group-incorrecto .formulario-input {
+	border: 3px solid #bb2929;
+}
+
+
+
+
+@font-face {
+    font-family: Roboto;
+    src: local("Roboto"),
+    url("../assets/fonts/Roboto-Regular.ttf");
+    font-weight: regular;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: local("Roboto"),
+    url("../assets/fonts/Roboto-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: local("Roboto"),
+    url("../assets/fonts/Roboto-BoldItalic.ttf");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: local("Roboto"),
+    url("../assets/fonts/Roboto-Light.ttf");
+    font-weight: light;
+}
